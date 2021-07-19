@@ -1,0 +1,132 @@
+:root{
+    --main-radius: 5px;
+    --main-padding: 5px;
+}
+
+html body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas: 
+    'nav nav nav nav'
+    'sidebar main main main'
+    'sidebar content1 content2 content3'
+    'sidebar footer footer footer';
+    grid-gap: 0.2rem;
+    font-family: Roboto, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #004d40;
+    text-align: center;
+}
+
+nav{
+    background-color: #7DFFD1;
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid{
+    display: none;
+}
+
+p{
+    margin-left: 100px;
+}
+
+ul{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    list-style: none;
+}
+
+li{
+    margin-right: 20px;
+}
+
+main{
+    background-color: #FFE487;
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#sidebar{
+    background-color: #70D7FF;
+    grid-area: sidebar;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#content1{
+    background-color: #FFA894;
+    grid-area: content1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#content2{
+    background-color: #FFA894;
+    grid-area: content2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#content3{
+    background-color: #FFA894;
+    grid-area: content3;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+footer{
+    background-color: #9CA6FF;
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+@media only screen and (max-width: 575px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: 
+        'nav'
+        'sidebar'
+        'main'
+        'content1'
+        'content2'
+        'content3'
+        'footer';
+    }
+
+    p{
+        margin-left: 20px;
+        font-size: 11px;
+    }
+
+    ul{
+       visibility: hidden
+    }
+
+    .grid{
+        display: block;
+        height: 24.8px;
+        margin: 11px 20px;
+        position: fixed;
+        right: 0;
+        top: 5px;
+    }
+
+}
