@@ -99,7 +99,7 @@ footer{
 
 @media only screen and (max-width: 575px){
     .container{
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat( auto-fit, minmax(280px, 1fr));
         grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
         grid-template-areas: 
         'nav'
@@ -117,15 +117,13 @@ footer{
     }
 
     ul{
-       visibility: hidden
+       display: none;
     }
 
     .grid{
         display: block;
         height: 24.8px;
-        margin: 11px 20px;
-        position: fixed;
-        right: 0;
+        margin-right: 10px;
         top: 5px;
     }
 
